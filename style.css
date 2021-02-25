@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+body {
+  background: #16d6dd;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  transform-style: preserve-3d;
+  perspective: 500px;
+}
+section .imgorfont {
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  line-height: 100vh;
+  font-size: 8vw;
+  color: #fff;
+  font-weight: 800;
+  text-shadow: 5px -6px 10px #351212;
+}
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+.banner .blocks {
+  position: relative;
+  display: block;
+  width: 2.5vw;
+  height: 2.5vh;
+  animation: animate 2s ease-in-out forwards;
+  animation-delay: 1s;
+}
+@keyframes animate {
+  0% {
+    transform: translateZ(2000px);
+    background: url(pic.png);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    transform: translateZ(0px);
+    background: url(pic.png);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    /* border: 1px solid rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
+  }
+}
+
+section.active .banner .blocks {
+  animation: animateTow 2s ease-in-out forwards;
+  background: url(pic.png);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
+}
+@keyframes animateTow {
+  0% {
+    transform: translateZ(0px);
+    background: url(pic.png);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+  }
+  100% {
+    transform: translateZ(2000px);
+    background: url(pic.png);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    /* border: 1px solid rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
+  }
+}
